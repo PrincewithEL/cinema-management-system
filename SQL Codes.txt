@@ -1,0 +1,6 @@
+CREATE TABLE `cinema_management_system`.`customers` (`Customer_ID` INT NOT NULL AUTO_INCREMENT , `First_Name` TEXT NOT NULL , `Last_Name` TEXT NOT NULL , `Email_Address` TEXT NOT NULL , `Phone_Number` TEXT NOT NULL , `Last_Visited` DATETIME NOT NULL , `Bookings` TEXT NOT NULL , `prefferedPayment_Type` TEXT NOT NULL , `Gender` ENUM('Male', 'Female') NOT NULL , PRIMARY KEY (`Customer_ID`), UNIQUE (`Email_Address`)) ENGINE = InnoDB;
+
+CREATE TABLE `cinema_management_system`.`staff` (`Staff_ID` INT NOT NULL AUTO_INCREMENT , `First_Name` TEXT NOT NULL , `Last_Name` TEXT NOT NULL , `Job_Type` TEXT NOT NULL , `Salary` DOUBLE NOT NULL , `Email_Address` TEXT NOT NULL , `Phone_Number` TEXT NOT NULL , `Gender` ENUM('Male', 'Female') NOT NULL , `Start_Shift` TIME NOT NULL , `End_Shift` TIME NOT NULL , PRIMARY KEY (`Staff_ID`)) ENGINE = InnoDB;
+
+CREATE TABLE `cinema_management_system`.`movies` (`Movie_ID` INT NOT NULL AUTO_INCREMENT , `Name` TEXT NOT NULL , `Date_Added` DATE NOT NULL , `Showing_Start` DATE NOT NULL , `Showing_End` DATE NOT NULL , `Movie_Studio` TEXT NOT NULL , `Movie_Suppliers` TEXT NOT NULL , `Format` ENUM('2D', '3D', '4D', '7D' ) NOT NULL , `Genre` TEXT NOT NULL , `Runtime` TEXT NOT NULL , PRIMARY KEY (`Movie_ID`)) ENGINE = InnoDB;
+
